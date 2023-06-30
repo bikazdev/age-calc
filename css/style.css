@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-off-white: hsl(0, 0%, 94%);
+  --neutral-light-grey: hsl(0, 0%, 86%);
+  --neutral-smokey-grey: hsl(0, 1%, 44%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: var(--neutral-off-white);
+}
+
+.container {
+  width: 20rem;
+  height: 27rem;
+  padding: 2rem 1.5rem;
+  background-color: var(--neutral-white);
+  border-radius: 1rem 1rem 5rem 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--neutral-smokey-grey);
+}
+
+.inputs div {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs .inpCount {
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+
+}
+.inputs .btnSide {
+  margin: 1.5rem 0;
+  position: relative;
+}
+.inputs .btnSide::before {
+  content: "";
+  width: 100%;
+  border: 1px solid var(--neutral-light-grey);
+}
+
+.inputs .btnSide button {
+  position: absolute;
+  right: 6.8rem;
+  top: -1.5rem;
+}
+
+.inputs div .head {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 0.2rem;
+}
+
+.inputs div input {
+  width: 100%;
+  height: 2.7rem;
+  border: 1px solid var(--neutral-light-grey);
+  border-radius: 0.4rem;
+  padding: 0 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  outline: none;
+}
+
+.inputs div .error {
+  margin-top: .2rem;
+  font-size: .63rem;
+  font-style: italic;
+  color: var(--primary-light-red);
+}
+
+.inputs button {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-purple);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.inputs button:active {
+  background-color: var(--primary-light-red);
+}
+
+.inputs button img {
+  scale: 60%;
+}
+
+.result {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.result .num {
+  color: var(--primary-purple);
+  letter-spacing: 0.4rem;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 38rem;
+    height: 27rem;
+    padding: 2rem 3rem;
+    background-color: var(--neutral-white);
+    border-radius: 1rem 1rem 8rem 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--neutral-smokey-grey);
+  }
+
+  .inputs .inpCount {
+    display: flex;
+    flex-direction: row;
+    gap: 1.3rem;
+  }
+  
+  .inputs div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inputs div .head {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 0.2rem;
+  }
+
+  .inputs div input {
+    width: 6.8rem;
+    height: 2.7rem;
+    border: 1px solid var(--neutral-light-grey);
+    border-radius: 0.4rem;
+    padding: 0 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    outline: none;
+  }
+
+  .inputs div .error {
+    margin-top: .2rem;
+    font-size: .63rem;
+    font-style: italic;
+    color: var(--primary-light-red);
+  }
+
+  .inputs .btnSide {
+    margin-top: 0;
+    display: flex;
+    position: relative;
+   
+  }
+  .inputs .btnSide::before {
+    content: "";
+    width: 90%;
+    border: 1px solid var(--neutral-light-grey);
+  }
+
+  .inputs .btnSide button {
+    position: absolute;
+    right: 0.5rem;
+    top: -1.8rem;
+  }
+
+  .inputs button {
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--primary-purple);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .inputs button:active {
+    background-color: var(--primary-light-red);
+  }
+
+  .inputs button img {
+    scale: 70%;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-style: italic;
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  .result .num {
+    color: var(--primary-purple);
+    letter-spacing: 0.3rem;
+  }
+}
